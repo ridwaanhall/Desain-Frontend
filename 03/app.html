@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form action=""></form>
+    <fieldset>
+      <legend>FORM HTML</legend>
+
+      <form action="">
+        <label for="pria">Gender Pria</label>
+        <input type="radio" id="pria" name="gender" /> Pria
+
+        <br />
+
+        <label for="wanita">Gender Wanita</label>
+        <input type="radio" id="wanita" name="gender" /> Wanita
+      </form>
+    </fieldset>
+
+    <fieldset>
+      <legend>FORM LOGIN</legend>
+      <label for="">E-mail</label>
+      <input type="email" />
+      <br />
+      <label for="">Password</label>
+      <input type="password" />
+      <button type="submit">Login</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>DATA LIST</legend>
+      <input list="bp" />
+
+      <datalist id="bp">
+        <option value="Python"></option>
+        <option value="Kotlin"></option>
+        <option value="React"></option>
+        <option value="PHP"></option>
+      </datalist>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dropdown</legend>
+      <select name="" id="">
+        <option value="Python">Python</option>
+        <option value="Kotlin">Kotlin</option>
+        <option value="React">React</option>
+        <option value="PHP">PHP</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Checkbox</legend>
+      <input type="checkbox" value="makan" name="hobi" />Makan
+      <input type="checkbox" value="tidur" name="hobi" />Tidur
+    </fieldset>
+
+    <fieldset>
+      <legend>Table</legend>
+      <table border="2" style="border-collapse: collapse">
+        <thead>
+          <th>Nama</th>
+          <th>Jurusan</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ridwan</td>
+            <td>Informatika</td>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <legend>Table</legend>
+      <table border="2" width="50%" style="border-collapse: collapse">
+        <tr>
+          <td rowspan="2">1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <!-- <td>3</td> -->
+          <td>4</td>
+        </tr>
+        <tr>
+          <td colspan="6">5</td>
+          <!-- <td>6</td> -->
+        </tr>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <legend>MEDIA ATTRIBUTE</legend>
+      <a href="http://uty.ac.id" target="_blank">UTEYEH</a>
+      <a href="http://image-map.net" target="_blank">MAP IMAGE</a>
+    </fieldset>
+  </body>
+</html>
+
+<!-- form
+        atribut : action, method, target
+        elemen  : - input
+                  - label
+                  - radio button
+                  - checkbox
+                  - select
+                  - datalist
+                  - button
+                  - dll
+    -->
