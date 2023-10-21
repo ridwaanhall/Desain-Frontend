@@ -8,17 +8,26 @@
 <body>
     <p id="nomor_1">belajar html 1</p> <!--tag p = tag name-->
     <p id="nomor_2">belajar html waokwakwoawoka</p>
+    <p class="hehe">belajar html anjaaayyyyy</p>
+    <p class="hehe">belajar html anjaaayyyyy</p>
+    <p class="hehe">belajar html anjaaayyyyy</p>
 
 
     <button onclick="ubahkonten()">ubah aku bang</button>
 
     <script>
         function ubahkonten () {
-            let paragraf = document.getElementById('nomor_1')
+            let paragraf_1 = document.getElementById('nomor_1')
             let paragraf_2 = document.getElementById('nomor_2')
+            let paragraf_3 = document.getElementsByClassName('hehe')
 
-            paragraf.innerHTML = 'Belajar mengingat'
+            paragraf_1.innerHTML = 'Belajar mengingat'
             paragraf_2.innerHTML = 'Belajar mengingat duaaaaaa'
+
+
+            for(let i = 0;i < paragraf_3.length;i++) {
+                paragraf_3[i].innerHTML = 'ini pake class'
+            }
 
         }
     </script>
