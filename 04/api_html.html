@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <p>belajar html 1</p> <!--tag p = tag name-->
+    <p id="nomor_1">belajar html 1</p> <!--tag p = tag name-->
     <p>belajar html 2</p>
     <p>belajar html 3</p>
 
@@ -17,7 +17,7 @@
             let paragraf = document.getElementsByTagName('p')
 
             for(let i = 0;i< paragraf.length;i++) {
-                paragraf[i].innerHTML = 'Belajar mengingat'
+                paragraf[i].innerHTML = 'Belajar mengingat'+ (i+1)
             }
 
         }
