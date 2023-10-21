@@ -6,14 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <p>belajar html 1</p>
+    <p>belajar html 1</p> <!--tag p = tag name-->
     <p>belajar html 2</p>
     <p>belajar html 3</p>
 
-    <button onclick="ubahkonten()"></button>
+    <button onclick="ubahkonten()">ubah aku bang</button>
 
     <script>
-        
+        function ubahkonten () {
+            let paragraf = document.getElementsByTagName('p')
+
+            for(let i = 0;i< paragraf.length;i++) {
+                paragraf[i].innerHTML = 'Belajar mengingat'
+            }
+
+        }
     </script>
 
 </body>
