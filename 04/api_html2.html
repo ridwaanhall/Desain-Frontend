@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="nomor_1">belajar html 1</p> <!--tag p = tag name-->
+    <p id="nomor_2">belajar html waokwakwoawoka</p>
+
+
+    <button onclick="ubahkonten()">ubah aku bang</button>
+
+    <!--berdasarkan tag, id, class-->
+
+    <script>
+        function ubahkonten () {
+            let paragraf = document.getElementById('nomor_1')
+            let paragraf_2 = document.getElementById('nomor_2')
+
+            paragraf.innerHTML = 'Belajar mengingat'
+            paragraf_2.innerHTML = 'Belajar mengingat duaaaaaa'
+
+        }
+    </script>
+
+</body>
+</html>
