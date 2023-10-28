@@ -1,4 +1,6 @@
-konsem web design
-dasar css
-responsif web
-fitur fitur alat bantu web
+A. konsem web design
+simpple, consistem, cikir palet, respoinsif, tyyphograp, fast loading, easy naviagtuion, communication
+
+B. dasar css
+C. responsif web
+D. fitur fitur alat bantu web
