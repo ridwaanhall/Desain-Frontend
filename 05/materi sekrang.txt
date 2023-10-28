@@ -2,5 +2,9 @@ A. konsem web design
 simpple, consistem, cikir palet, respoinsif, tyyphograp, fast loading, easy naviagtuion, communication
 
 B. dasar css
+universal selector, tag selector, id selector, class selector, atribut selector
+
 C. responsif web
 D. fitur fitur alat bantu web
+E. elemen desain : webtypo, color, media, graphic, rabel, form, frame, border, layout, shape
+F. 
