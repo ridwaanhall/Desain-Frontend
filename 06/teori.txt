@@ -10,4 +10,9 @@ usability
 - sejauh mana produk dapat digunakan
 - elemen desain berfokus pada dapatkah ini digunakan ketika selesai dikerjakan daripada hanya sekedar untuk dilihat (hanya tampilan, tiada fungsional)
 - sejauh mana sebuah situs web daoat memberikan pengalaman yang baik bagi pengunjungnya. (ada ux, penglaman.)
-- sebuah kondisi yang diperlukan untuk bertakan, juka website sylut digunakan, maka akan ditinggal ()
+- sebuah kondisi yang diperlukan untuk bertakan, juka website sylut digunakan, maka akan ditinggal (user biar betah caranya gimana)
+
+homepage
+- halaman awal
+- halaman yang pertamakali dikunjungi
+- halaman index
