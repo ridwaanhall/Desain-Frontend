@@ -14,5 +14,5 @@ usability
 
 homepage
 - halaman awal
-- halaman yang pertamakali dikunjungi
+- halaman yang pertamakali dikunjungi (fungsional)
 - halaman index
