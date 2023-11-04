@@ -1,7 +1,7 @@
 fitur fitur alat bantu pembuatan situs web
-- code editor
-- prowser
-- web server
-- DBMS
-- database server
-- framework, version control, depecdency manager,dan lain lain
+- code editor : vscode, dll
+- prowser : chrome dll
+- web server : apache
+- DBMS : mysql => CRUD
+- database server : 
+- framework (php : laravel; python : dj, flask ; java : spring ; ), version control (git, ), depecdency manager :  ( php : composer ; python : pip ),dan lain lain. (venv = docker)
