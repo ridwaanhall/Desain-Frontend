@@ -4,4 +4,4 @@ fitur fitur alat bantu pembuatan situs web
 - web server : apache
 - DBMS : mysql => CRUD
 - database server : 
-- framework (php : laravel; python : dj, flask ; java : spring ; ), version control (git, ), depecdency manager :  ( php : composer ; python : pip ),dan lain lain. (venv = docker)
+- framework (php : laravel; python : dj, flask ; java : spring ; ), version control (git, ), depecdency manager :  ( php : composer ; python : pip ),dan lain lain. (venv = docker), kuernetes : mengelola
