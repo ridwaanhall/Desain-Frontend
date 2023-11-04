@@ -5,3 +5,9 @@ fitur fitur alat bantu pembuatan situs web
 - DBMS : mysql => CRUD
 - database server : 
 - framework (php : laravel; python : dj, flask ; java : spring ; ), version control (git, ), depecdency manager :  ( php : composer ; python : pip ),dan lain lain. (venv = docker), kuernetes : mengelola
+
+usability
+- sejauh mana produk dapat digunakan
+- elemen desain berfokus pada dapatkah ini digunakan ketika selesai dikerjakan daripada hanya sekedar untuk dilihat (hanya tampilan, tiada fungsional)
+- sejauh mana sebuah situs web daoat memberikan pengalaman yang baik bagi pengunjungnya.
+- sebuah kondisi yang diperlukan untuk bertakan, juka website sylut digunakan, maka akan ditinggal
