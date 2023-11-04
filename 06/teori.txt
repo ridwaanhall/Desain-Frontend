@@ -21,6 +21,16 @@ note: penelitian tentang ui/ux harus ada dasarannya, bukan kira kira
 usability homepage
 - effective
 - efficient
-- engaging
+- engaging ()
 - error tolerant
-- easy to learn
+- easy to learn (buat disabilitas)
+
+macam macam pengujian usability
+- think alout testing = mengunpulkan wawasan penglaman pengguna. reaksi, kesan/pesan.
+- expert review = dilakukan oleh orang ahli ui/ux untuk mengevaluasi produk berdasarkan pengutehuan dan penglamannya, tidak ada tugas utnuk pakar. pedoman desain utnuk evaluasi.
+- scenario based task = (langkah langkah) tugas tugas yang spesifik, ada kendala tidak, trus lnjut tugas kedua. dst. klo bug tulis.
+- a/b testing = menguji dua versi berbeda dari suatu ekemen atau halaman untuk melihat mana yang lebih efejtif dalam mencaopau tujuan yang ditetapkan. membantu mengoptimalkan elemen elemen tampilan
+- card sorting = mengorganisir/mengkelompokkan elemen elemn infomasi aau elemen dalam suatu produk antaa muka pengguna. mengkelompokkan informasi.
+- eye tracking = melacak gerakan mata pnegguna saat mereka perinteraksi dengan produk antra muka penguka untuk memahami sejauh mana fokus mereka pada lemen elemen tampilan.
+- user satisdaction surveys = user diminta untuk emngisi survei untuk mengukur tingjatan kepuasan thd pengualan pengguna dengan produk.
+-  heatmap analysis = mengggunakan perangkat lunah untuk memvisualisasikan dimana pengguna sering melajujan aktifitas klik pada elemen tertentu.
