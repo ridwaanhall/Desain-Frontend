@@ -16,3 +16,11 @@ homepage
 - halaman awal
 - halaman yang pertamakali dikunjungi (fungsional)
 - halaman index
+note: penelitian tentang ui/ux harus ada dasarannya, bukan kira kira
+
+usability homepage
+- effective
+- efficient
+- engaging
+- error tolerant
+- easy to learn
