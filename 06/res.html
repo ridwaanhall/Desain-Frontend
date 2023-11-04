@@ -13,7 +13,7 @@
         .header {
             height: 100px;
             width: 100%;
-            background-color: red;
+            background-color: rgb(0, 174, 255);
             justify-content: center;
             align-items: center;
             display: flex;
@@ -27,8 +27,22 @@
         .left {
             height: 500px;
             width: 20%;
-            background-color: blue;
+            background-color: rgb(200, 200, 247);
             float: left;
+            /*kalo list jangan pake yang bawah ini*/
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        
+        .right {
+            height: 500px;
+            width: 80%;
+            background-color: green;
+            float: right;
+            justify-content: center;
+            align-items: center;
+            display: flex;
         }
     </style>
 </head>
@@ -37,6 +51,12 @@
     <div class="container">
         <div class="header">
             Header
+        </div>
+        <div class="article left">
+            menu
+        </div>
+        <div class="article right">
+            content article
         </div>
     </div>
 </body>
