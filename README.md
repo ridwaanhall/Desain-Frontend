@@ -4,3 +4,4 @@ buat kelen yang masih maba bisa cek disini ya. tapi follow dulu gak sii biar gw 
 instagram : ridwaanhall
 <br>
 materi ada di teori.txt
+anjay mau uts
