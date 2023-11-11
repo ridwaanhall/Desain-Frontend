@@ -1,0 +1,13 @@
+tahapan pengujian
+1. perencanaan pengujian : membutuhkan informasi dan data (information gathering)
+2. pelaksanaan pengujian : 
+3. analisa hasil : hasil analisa menjadi bahan evaluasi
+4. evaluasi : kesalahan yg timbul akan dijawab disini.
+
+manfaat pengujian
+- information gathering
+-- siapa saja penggunanya?
+-- apa saja yang dapat dilakukan pengguna?
+-- apa saja yang diinginkan pengguna?
+-- apa saja keterbatasan sistem saat ini?
+- memahami prinsip dan aturan desain
