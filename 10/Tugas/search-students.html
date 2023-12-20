@@ -49,11 +49,8 @@
               <table class="table table-flush" id="datatable-students">
                 <thead class="thead-light">
                   <tr>
-                    <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Name</th>
-                    <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Student ID</th>
-                    <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">College</th>
-                    <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">Study Program</th>
-                    <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7"></th>
+                    <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">text</th>
+                    <th class="text-uppercase text-secondary text-sm font-weight-bolder opacity-7">website link</th>
                   </tr>
                 </thead>
                 <tbody id="studentTableBody">
@@ -77,41 +74,6 @@
     });
   </script>
   <script>
-    function searchMHS() {
-      let searchName = $('#searchName').val();
-  
-      $.ajax({
-        url: `https://api-frontend.kemdikbud.go.id/hit_mhs/${searchName}`,
-        method: 'GET',
-        dataType: 'jsonp',
-        success: function(result) {
-          if (result.mahasiswa.length > 0) {
-            // Clear previous results
-            $('#studentTableBody').empty();
-  
-            // Append new results to the table
-            result.mahasiswa.forEach(function(student) {
-              $('#studentTableBody').append(`
-                <tr>
-                  <td class="text-sm font-weight-normal">${student.text}</td>
-                  <td class="text-sm font-weight-normal">${student.id_number}</td>
-                  <td class="text-sm font-weight-normal">${student.college}</td>
-                  <td class="text-sm font-weight-normal">${student.program}</td>
-                  <td class="text-sm font-weight-normal align-middle"><a href="/detail-student${student['website-link']}"><i class="fa-solid fa-magnifying-glass"></i></a></td>
-                </tr>
-              `);
-            });
-          } else {
-            // Handle case when no results are found
-            alert('No results found!');
-          }
-        },
-        error: function() {
-          // Handle AJAX error
-          alert('Error fetching data');
-        }
-      });
-    }
   </script>
 </body>
 
