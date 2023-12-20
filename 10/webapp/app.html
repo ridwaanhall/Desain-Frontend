@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <label for="movieTitle">Pencarian Judul: </label>
+    <input type="text" id="movieTitle" placeholder="Pencarian Judul">
+    <button onclick="searchMovie()">cari</button>
+
+    <div id="movieResult"></div>
+
+    <script>
+        function searchMovie() {
+            let apiKey = '73deab38'
+            let movieTitle = $('#movieTitle').val()
+
+            // console.log(movieTitle)
+
+            $.ajax({
+                url : 'http://www.omdbapi.com/',
+                method : 'GET',
+                type : 'json',
+                data : { apikey: apiKey, s:movieTitle },
+
+                success: function(result) {
+                    if (result.Response === 'True') {
+
+                        $('#movieResult').empty()
+
+                        result.Search.forEach(function(movie) {
+                            let movieData = `
+                                <div>
+                                    <h2>${movie.Title}</h2>
+                                    <p><strong>${movie.Type}</strong></p>   
+                                    <p><strong>${movie.imdbID}</strong></p>
+                                    <img src='${movie.Poster}'>   
+                                </div>
+                            `
+                            // console.log(movieData)
+                            $('#movieResult').append(movieData)
+
+                        })
+
+                    } else {
+                        $('#movieResult').html('<p>Data Tidak Ditemukan</p>')
+                    }
+                }
+            })
+
+        }
+    </script>
+</body>
+</html>

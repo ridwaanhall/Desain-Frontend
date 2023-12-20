@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        $.ajax({
+            url: 'http://www.omdbapi.com/?apikey=API_KEY&s=spiderman',
+            method: 'GET',
+            
+            success:function(result) {
+                // console.log(result.Search[0].Title)
+
+                for(let i=0;i<result.Search.length;i++) {
+                    console.log(result.Search[i]) //Menampilkan semua objek data pencarian
+                    // console.log(result.Search[i].Title) //Menampilkan judul semua hasil pencarian
+                }
+
+            }
+        })
+    </script>
+</body>
+</html>
