@@ -27,13 +27,13 @@
             </div>
           </div>
           <div class="card-body">
-                <div class="col-md-12">
-                  <div class="input-group input-group-outline mb-4">
-                    <label class="form-label">Input</label>
-                    <input type="text" name="searchName" class="form-control">
-                  </div>
-                </div>
-                <button onclick="searchMHS()" class="btn btn-outline-primary">Search</button>
+            <div class="col-md-12">
+              <div class="input-group input-group-outline mb-4">
+                <label class="form-label">Input</label>
+                <input type="text" name="searchName" class="form-control" id="searchName">
+              </div>
+            </div>
+            <button onclick="searchMHS()" class="btn btn-outline-primary">Search</button>
           </div>
         </div>
       </div>
@@ -74,6 +74,28 @@
     });
   </script>
   <script>
+    async function searchMHS() {
+      const searchName = document.getElementById('searchName').value;
+      const apiUrl = `https://pddikti-api.ridwaanhall.repl.co/hit_mhs/${encodeURIComponent(searchName)}`;
+
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        if (data.mahasiswa && data.mahasiswa.length > 0) {
+          console.log('Search Results:');
+          data.mahasiswa.forEach(mahasiswa => {
+            console.log(`Name: ${mahasiswa.text}`);
+            console.log(`Website Link: ${mahasiswa['website-link']}`);
+            console.log('------------------------');
+          });
+        } else {
+          console.log('No results found.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
   </script>
 </body>
 
