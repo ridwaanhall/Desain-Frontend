@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url('3.jpg'); /* Add the background image URL here */
+            background-size: cover;
+            background-position: center;
+        }
+
+        #results-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.9); /* Add background color with transparency */
+        }
+
+        .movies-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .movie {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+            width: 200px;
+            box-sizing: border-box;
+        }
+
+        .movie img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #4285f4;
+        }
+
+        p {
+            margin: 0;
+            color: #555;
+        }
+
+        .no-results {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div id="results-container">
+        <h1>Search Results</h1>
+        <div class="movies-container" id="movieResult"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the search query from the URL parameter
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('query');
+
+            // Display search results based on the query
+            if (query) {
+                searchMovie(query);
+            } else {
+                // Handle no query case
+                document.getElementById('movieResult').innerHTML = '<p class="no-results">No search query provided</p>';
+            }
+        });
+
+        function searchMovie(query) {
+            const apiKey = '73deab38'; // Replace with your actual API key
+
+            fetch(https://www.omdbapi.com/?apikey=${apiKey}&s=${query})
+                .then(response => response.json())
+                .then(result => displayMovies(result.Search))
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        function displayMovies(movies) {
+            const movieResult = document.getElementById('movieResult');
+            movieResult.innerHTML = '';
+
+            if (movies && movies.length > 0) {
+                movies.forEach(movie => {
+                    const movieData = `
+                        <div class="movie">
+                            <img src='${movie.Poster}' alt='${movie.Title} Poster'>
+                            <h2>${movie.Title}</h2>
+                            <p><strong>Type:</strong> ${movie.Type}</p>
+                            <p><strong>IMDb ID:</strong> ${movie.imdbID}</p>
+                        </div>
+                    `;
+                    movieResult.innerHTML += movieData;
+                });
+            } else {
+                movieResult.innerHTML = '<p class="no-results">No movies found</p>';
+            }
+        }
+    </script>
+</body>
+</html>
