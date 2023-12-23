@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Add your meta tags, title, and CSS links here -->
+  <title>Search Movies</title>
+  <!-- Add your CSS links here -->
+</head>
+
+<body class="d-flex align-items-center justify-content-center vh-100">
+  <div class="container">
+    <!-- Your existing search form and elements go here -->
+    <form>
+        <!-- Your existing search form and elements go here -->
+        <div class="col-md-12">
+          <div class="input-group input-group-outline mb-4">
+            <label class="form-label">Movie Title</label>
+            <input type="text" name="searchTitle" class="form-control" id="searchTitle">
+          </div>
+        </div>
+        <button type="button" onclick="searchOMDB()" class="btn btn-outline-primary">Search</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      function searchOMDB() {
+        const searchTitle = $('#searchTitle').val();
+        const apiKey = 'fa604f7b';
+        const apiUrl = `http://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(searchTitle)}`;
+
+        $.ajax({
+          url: apiUrl,
+          type: 'GET',
+          dataType: 'json',
+          success: function (data) {
+            // Redirect to results.html with search results
+            window.location.href = `results.html?results=${encodeURIComponent(JSON.stringify(data.Search))}`;
+          },
+          error: function (error) {
+            console.error('Error fetching data:', error);
+          }
+        });
+      }
+    </script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Add your meta tags, title, and CSS links here -->
+  <title>Search Results</title>
+  <!-- Add your CSS links here -->
+</head>
+
+<body>
+  <h1>Search Results</h1>
+
+  <div id="movieTable">
+    <!-- Display the search results here -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Get the search results from the URL parameters
+      const searchResults = getSearchResultsFromURL();
+
+      // Display the search results
+      displaySearchResults(searchResults);
+    });
+
+    function getSearchResultsFromURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const resultsParam = urlParams.get('results');
+      return JSON.parse(resultsParam) || [];
+    }
+
+    function displaySearchResults(searchResults) {
+      const movieTable = $('#movieTable');
+
+      if (searchResults && searchResults.length > 0) {
+        searchResults.forEach(movie => {
+          movieTable.append(`
+            <div>
+              <p>Title: ${movie.Title}</p>
+              <p>Year: ${movie.Year}</p>
+              <p>Type: ${movie.Type}</p>
+              <p>ID: ${movie.imdbID}</p>
+              <img src="${movie.Poster}" alt="Poster" style="width: 50px; height: auto;">
+            </div>
+          `);
+        });
+      } else {
+        movieTable.append('<p>No results found.</p>');
+      }
+    }
+  </script>
+</body>
+
+</html>
